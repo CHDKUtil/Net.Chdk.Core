@@ -1,7 +1,4 @@
-﻿using System.Resources;
-using System.Reflection;
-using System.Runtime.CompilerServices;
-using System.Runtime.InteropServices;
+﻿using System.Reflection;
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
@@ -9,12 +6,6 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Net.Chdk.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Dmitry Shechtman")]
-[assembly: AssemblyProduct("Net.Chdk")]
-[assembly: AssemblyCopyright("Copyright © 2017 Dmitry Shechtman")]
-[assembly: AssemblyTrademark("")]
-[assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("en")]
 
 // Version information for an assembly consists of the following four values:
 //
