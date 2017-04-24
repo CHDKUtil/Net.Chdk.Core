@@ -18,7 +18,7 @@ namespace Net.Chdk.Json
 
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
-            var str = reader.ReadAsString();
+            var str = reader.Value as string;
             if (str == null || !str.StartsWith("0x"))
                 throw new JsonSerializationException();
             return uint.Parse(str.Substring(2), NumberStyles.HexNumber | NumberStyles.AllowHexSpecifier);
