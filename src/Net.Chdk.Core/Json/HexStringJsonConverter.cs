@@ -1,6 +1,5 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Globalization;
 
 namespace Net.Chdk.Json
 {
@@ -19,9 +18,34 @@ namespace Net.Chdk.Json
         public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
         {
             var str = reader.Value as string;
-            if (str == null || !str.StartsWith("0x"))
+            if (str == null)
                 throw new JsonSerializationException();
-            return uint.Parse(str.Substring(2), NumberStyles.HexNumber | NumberStyles.AllowHexSpecifier);
+            try
+            {
+                return Convert.ToUInt32(str, GetBase(str));
+            }
+            catch (Exception ex)
+            {
+                throw new JsonSerializationException("Error deserializing", ex);
+            }
+        }
+
+        private static int GetBase(string str)
+        {
+            if (str.Length < 2 || str[0] != '0')
+                return 10;
+
+            switch (str[1])
+            {
+                case 'b':
+                case 'B':
+                    return 2;
+                case 'x':
+                case 'X':
+                    return 16;
+                default:
+                    return 8;
+            }
         }
     }
 }
