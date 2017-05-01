@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
 using Newtonsoft.Json.Serialization;
 using System;
 using System.IO;
@@ -31,7 +32,8 @@ namespace Net.Chdk
         {
             var settings = new JsonSerializerSettings
             {
-                ContractResolver = new CamelCasePropertyNamesContractResolver()
+                ContractResolver = new CamelCasePropertyNamesContractResolver(),
+                Converters = new[] { new VersionConverter() },
             };
             return JsonSerializer.CreateDefault(settings);
         }
