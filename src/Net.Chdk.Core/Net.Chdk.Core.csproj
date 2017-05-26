@@ -38,8 +38,6 @@
   <ItemGroup>
     <Compile Include="Directories.cs" />
     <Compile Include="Files.cs" />
-    <Compile Include="JsonObject.cs" />
-    <Compile Include="Json\HexStringJsonConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
