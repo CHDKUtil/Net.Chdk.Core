@@ -3,7 +3,7 @@ using System.Reflection;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyCompany("Dmitry Shechtman")]
-[assembly: AssemblyProduct("Net.Chdk")]
+[assembly: AssemblyProduct("CHIMP")]
 [assembly: AssemblyCopyright("Copyright © 2017 Dmitry Shechtman")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
