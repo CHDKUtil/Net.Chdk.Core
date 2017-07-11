@@ -4,9 +4,16 @@
     {
         public static string TrimStart(this string str, string prefix)
         {
-            if (!str.StartsWith(prefix))
-                return null;
-            return str.Substring(prefix.Length);
+            return str.StartsWith(prefix)
+                ? str.Substring(prefix.Length)
+                : str;
+        }
+
+        public static string TrimEnd(this string str, string suffix)
+        {
+            return str.EndsWith(suffix)
+                ? str.Substring(0, str.Length - suffix.Length)
+                : str;
         }
     }
 }
