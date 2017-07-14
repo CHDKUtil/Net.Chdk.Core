@@ -5,12 +5,9 @@ VisualStudioVersion = 15.0.26430.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Net.Chdk.Core", "Net.Chdk.Core.csproj", "{6C183A9C-30C1-47E5-9016-48890EC8ABA2}"
 EndProject
-Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Net.Chdk.Shared", "..\Net.Chdk.Shared\Net.Chdk.Shared.shproj", "{83C6A77C-3286-4F5F-B628-3B971097AD05}"
-EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		..\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{6c183a9c-30c1-47e5-9016-48890ec8aba2}*SharedItemsImports = 4
-		..\Net.Chdk.Shared\Net.Chdk.Shared.projitems*{83c6a77c-3286-4f5f-b628-3b971097ad05}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
